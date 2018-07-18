@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 80vh;
   }
 
   .flex-item {
@@ -21,6 +21,5 @@
 
   body {
       background-color: #FFD039;
-      color: 
   }
   
