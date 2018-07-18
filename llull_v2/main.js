@@ -40,7 +40,7 @@ let A = [
     {
       letter: "F",
       name: "Wisdom",
-      relationship: "Middel",
+      relationship: "Middle",
       question: "How much?",
       subject: "Imaginative",
       virtue: "Faith",
