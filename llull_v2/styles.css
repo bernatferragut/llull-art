@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 32vh;
   }
 
   .flex-item {
@@ -17,6 +17,31 @@
     font-weight: bold;
     font-size: 13em;
     text-align: center;
+  }
+
+  .flex-item2 {
+    padding: 5px;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    line-height: 150px;
+    color: #F47942;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .flex-item3 {
+    padding: 5px;
+    width: 500px;
+    height: 50px;
+    margin: 10px;
+    line-height: 150px;
+    color: #F47942;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 2px;
   }
 
   body {
