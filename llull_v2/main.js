@@ -1,7 +1,7 @@
 
 // LLULLIAN ALPHABET - ARS BREVIS
 
-// VUE
+// VUE OBJECT
 let app = new Vue({
   el: '#app',
   data: {
@@ -93,6 +93,8 @@ let app = new Vue({
     thirdLetter: 'C'
   },
   methods: {
-    //
+    randLetter : function() {
+      return this.divinities[Math.floor(Math.random()*10)].letter;
+    }
   }
 });
