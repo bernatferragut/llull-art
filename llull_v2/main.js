@@ -93,16 +93,16 @@ let app = new Vue({
     numbersList: [1,2,3,4,5,6,7,8,9],
     shuffledList: [],
     fourSelected: [],
-    finalList: [],
-    randNumber:'?',
-    firstLetter: 'B',
+    finalList   : [],
+    randNumber  :'?',
+    firstLetter : 'B',
     secondLetter: 'B',
-    thirdLetter: 'B',
+    thirdLetter : 'B',
     fourthLetter: 'T',
     // random questions
-    question:'question',
-    subject: 'subject',
-    verb: 'verb'
+    question    :'question',
+    subject     : 'subject',
+    verb        : 'verb'
   },
   
 created: function() {
@@ -110,10 +110,8 @@ created: function() {
   this.shuffledList = this.numbersList.sort(function(){ return 0.5-Math.random()});
   // first 4 pick
   this.fourSelected = this.shuffledList.splice(0,4);
-  console.log(this.fourSelected);
   // random letter selection
   this.randNumber = this.fourSelected[Math.floor(Math.random()*4)];
-  console.log(this.randNumber);
   // asssign fourSelected values and push to finalList
   this.firstLetter  = this.divinities[this.fourSelected[0]].letter;
   this.finalList.push(this.firstLetter);
@@ -125,11 +123,15 @@ created: function() {
   this.finalList.push(this.fourthLetter);
   // once we have the final list we insert the T char
   this.finalList.splice(this.randNumber-1,1,'T');
-  console.log(this.finalList);
+  // final var assignations
   this.firstLetter  = this.finalList[0];
   this.secondLetter = this.finalList[1];
   this.thirdLetter  = this.finalList[2];
   this.fourthLetter = this.finalList[3];
+  // questions, subjects and verbs
+  this.question = this.divinities[this.fourSelected[0]].question;
+  this.subject  = this.divinities[this.fourSelected[1]].name;
+  this.verb     = this.divinities[this.fourSelected[2]].relationship;
 },
 
 methods: {

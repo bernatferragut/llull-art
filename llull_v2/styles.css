@@ -13,10 +13,13 @@
     height: 150px;
     margin: 10px;
     line-height: 150px;
-    color: #323741;
     font-weight: bold;
     font-size: 13em;
     text-align: center;
+  }
+
+  #item-one {
+    color: #128C87;
   }
 
   .flex-item2 {
@@ -25,10 +28,14 @@
     height: 250px;
     margin: 10px;
     line-height: 150px;
-    color: #F47942;
+    color: #FF9130;
     font-weight: bold;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
+  }
+
+  #item-two {
+    color: #F53A33;
   }
 
   .flex-item3 {
@@ -37,14 +44,18 @@
     height: 50px;
     margin: 10px;
     line-height: 150px;
-    color: #F47942;
+    color: #FF9130;
     font-weight: bold;
     font-size: 3em;
     text-align: center;
     letter-spacing: 2px;
   }
 
+  #item-three {
+    color: #FEDD55;
+  }
+
   body {
-      background-color: #FFD039;
+      background-color: #3B0031;
   }
   
