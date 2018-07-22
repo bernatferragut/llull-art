@@ -115,7 +115,7 @@ created: function() {
   // console.log(this.randLetter);
   let i = this.fourSelected.indexOf(this.randLetter);
   console.log(i);
-  this.fourSelected.splice(i,1,'K');
+  this.fourSelected.splice(i,1,'T');
   console.log(this.fourSelected);
 
   // console.log(this.fourSelected);
