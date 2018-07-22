@@ -93,44 +93,51 @@ let app = new Vue({
     numbersList: [1,2,3,4,5,6,7,8,9],
     shuffledList: [],
     fourSelected: [],
-    randLetter:'?',
+    finalList: [],
+    randNumber:'?',
     firstLetter: 'B',
     secondLetter: 'B',
     thirdLetter: 'B',
-    fourthLetter: 'K',
+    fourthLetter: 'T',
     // random questions
     question:'question',
     subject: 'subject',
     verb: 'verb'
-    
   },
+  
 created: function() {
   // pseudo-shuffle trick!
-  this.shuffledList = this.numbersList.sort(function(){
-    return 0.5-Math.random()
-  });
+  this.shuffledList = this.numbersList.sort(function(){ return 0.5-Math.random()});
+  // first 4 pick
   this.fourSelected = this.shuffledList.splice(0,4);
   console.log(this.fourSelected);
-  this.randLetter = this.fourSelected[Math.floor(Math.random()*4)];
-  // console.log(this.randLetter);
-  let i = this.fourSelected.indexOf(this.randLetter);
-  console.log(i);
-  this.fourSelected.splice(i,1,'T');
-  console.log(this.fourSelected);
-
-  // console.log(this.fourSelected);
+  // random letter selection
+  this.randNumber = this.fourSelected[Math.floor(Math.random()*4)];
+  console.log(this.randNumber);
+  // asssign fourSelected values and push to finalList
   this.firstLetter  = this.divinities[this.fourSelected[0]].letter;
+  this.finalList.push(this.firstLetter);
   this.secondLetter = this.divinities[this.fourSelected[1]].letter;
+  this.finalList.push(this.secondLetter);
   this.thirdLetter  = this.divinities[this.fourSelected[2]].letter;
+  this.finalList.push(this.thirdLetter);
   this.fourthLetter = this.divinities[this.fourSelected[3]].letter;
+  this.finalList.push(this.fourthLetter);
+  // once we have the final list we insert the T char
+  this.finalList.splice(this.randNumber-1,1,'T');
+  console.log(this.finalList);
+  this.firstLetter  = this.finalList[0];
+  this.secondLetter = this.finalList[1];
+  this.thirdLetter  = this.finalList[2];
+  this.fourthLetter = this.finalList[3];
 },
 
 methods: {
-  shuffleArray: function (array){
-    for (let i = array.length - 1; i > 0; i--) {
-        const rand = Math.floor(Math.random() * (i + 1));
-        [array[i], array[rand]] = [array[rand], array[i]];
-    }
-  },
+  // shuffleArray: function (array){
+  //   for (let i = array.length - 1; i > 0; i--) {
+  //       const rand = Math.floor(Math.random() * (i + 1));
+  //       [array[i], array[rand]] = [array[rand], array[i]];
+  //   }
+  // },
 }
 });
